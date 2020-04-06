@@ -9,23 +9,33 @@ public class StringLongestsubString {
 		// TODO Auto-generated method stub
 		String s1 = "NnerajSharma";
 		s1 = s1.toUpperCase();
-		StringBuilder sb=new StringBuilder();
 		Map<Integer,Character> map=new HashMap<Integer,Character>();
-		int count = 0;
+		Map<Integer,Character> newMap=new HashMap<Integer,Character>();
+		int count = 1;
 		int lengh = 0;
 		int k=0;
 		while(k<s1.length()) {
 			map.put(k, s1.charAt(k));
+			count = 1;
 		for (int i = k+1; i < s1.length(); i++) { 
-			if(!map.containsValue(s1.charAt(i-1))) {
-				map.put(i, s1.charAt(i-1));
-				
+			if(!map.containsValue(s1.charAt(i))) {
+				map.put(i, s1.charAt(i));
+				count++;
 			}
 			else {
 				
+				if(newMap.size()<=count) {
+					newMap.clear();
+					newMap.putAll(map);
+				    
+				}
+				map.clear();
+				break;
 			}
 		}
 		k++;
+		
 		}
+		
 	}
 }

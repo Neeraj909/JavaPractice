@@ -22,6 +22,7 @@ public class ListInJava {
 		while (current != null) {
 			System.out.print(current.data + "->");
 			current = current.next;
+			
 		}
 		System.out.println(current);
 	}
