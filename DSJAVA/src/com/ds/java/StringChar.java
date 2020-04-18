@@ -8,7 +8,7 @@ public class StringChar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s1 = "a2b3c1n3";
+		String s1 = "a23b3c1n3";
 		String regex = "((?<=[a-zA-Z])(?=[0-9]))|((?<=[0-9])(?=[a-zA-Z]))";
 		StringBuilder bulide = new StringBuilder();
 		int count;
