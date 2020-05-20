@@ -1,15 +1,30 @@
 package com.java;
 
-public class A {
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+
+public class A{
+	
 
 	public static void main(String[] args) {
+	Map<String,String> map =new HashMap<>();
+	map.put("n", "w");
+	System.out.println(map.get("n"));
+	System.out.println(map.get("w"));
+	System.out.println(map.get("r"));
+	System.out.println(map.containsKey("n"));
+	System.out.println(map.containsKey("w"));
+	System.out.println(map.containsValue("n"));
+	System.out.println(map.containsValue("w"));
+	for(Entry<String,String > m:map.entrySet()) {
+		System.out.println(m.getKey());
+		System.out.println(m.getValue());
+		System.out.println(map.getClass());
+	}
+	
 		
-		String s1="Report_";
-		for(int i=0;i<=100;i++) {
-			s1="Chrome_";
-			s1=s1+""+i;
-			System.out.println(s1);
-		}
 	}
 
 }
