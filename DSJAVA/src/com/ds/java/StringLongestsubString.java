@@ -7,35 +7,36 @@ public class StringLongestsubString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s1 = "NnerajSharma";
-		s1 = s1.toUpperCase();
-		Map<Integer,Character> map=new HashMap<Integer,Character>();
-		Map<Integer,Character> newMap=new HashMap<Integer,Character>();
-		int count = 1;
-		int lengh = 0;
-		int k=0;
-		while(k<s1.length()) {
-			map.put(k, s1.charAt(k));
-			count = 1;
-		for (int i = k+1; i < s1.length(); i++) { 
-			if(!map.containsValue(s1.charAt(i))) {
-				map.put(i, s1.charAt(i));
-				count++;
+		String s1 = "NnverajShafdfedeerergrbbnyjyhcscrma".toLowerCase();
+		StringBuffer sb=new StringBuffer();
+		HashMap<Character,Integer> map=new HashMap<Character,Integer>();
+		HashMap<Character,Integer> mapCopy=new HashMap<Character,Integer>();
+		int count=0;
+		for(int i=0;i<s1.length();i++) {
+			for(int j=i+1;j<s1.length();j++) {
+				if(s1.charAt(i)==s1.charAt(j)|| map.containsKey(s1.charAt(j-1))) {
+					count =map.size();
+					break;
+					
+				}
+				else {
+					map.put(s1.charAt(j-1), i);
+				
+				}
+				
+			}
+			if(count>mapCopy.size()) {
+				mapCopy=(HashMap<Character, Integer>) map.clone();
+				map.clear();
 			}
 			else {
-				
-				if(newMap.size()<=count) {
-					newMap.clear();
-					newMap.putAll(map);
-				    
-				}
 				map.clear();
-				break;
 			}
+			
+			
 		}
-		k++;
-		
-		}
-		
+		System.out.println(mapCopy);
+
 	}
+		
 }
