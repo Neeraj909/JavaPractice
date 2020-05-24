@@ -5,13 +5,15 @@ import java.util.Arrays;
 
 public class ArrayRoation {
 	  public static void rotate(int[] unOrderedArr, int k) {
-	        for(int i = 0; i<k; i++){
+	     int  i=0; 
+		  while(i<k){
 
 	            for(int j = unOrderedArr.length-1; j>0; j--){
 	                int temp = unOrderedArr[j];
 	                unOrderedArr[j] = unOrderedArr[j-1];
 	                unOrderedArr[j-1] = temp;
 	            }
+	            i++;
 	        }
 	       for(int l=0;l<unOrderedArr.length;l++) {
 	    	   System.out.print(unOrderedArr[l]);
