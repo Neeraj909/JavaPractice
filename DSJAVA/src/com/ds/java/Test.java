@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
 
-public class Test  implements t1{
+public class Test  {
 	int a;
 	int b;
 	public void m1(int a,int b) {

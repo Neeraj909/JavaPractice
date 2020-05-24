@@ -94,9 +94,11 @@ public class SinglyLinkedList {
 				prev = prev.next;
 				count++;
 			}
+			
 			Node current = prev.next;
 			newNode.next = current;
 			prev.next = newNode;
+			head.next=prev;
 			return head;
 
 		}
@@ -150,7 +152,7 @@ public class SinglyLinkedList {
 		display(bigNode);
 		bigNode = insertAtPosition(3, bigNode, 78);
 		System.out.println();
-		display(bigNode);
+//		display(bigNode);
 //		bigNode=detefirstNode(bigNode);
 //		System.out.println(bigNode.data);
 //		display(bigNode);

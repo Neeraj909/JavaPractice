@@ -58,6 +58,6 @@ public class ReversLinkedListGroupOfNode {
 		}
 
 		head = reverseInGroups(head, 3);
-		head.print();
+ 		head.print();
 	}
 }

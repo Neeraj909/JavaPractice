@@ -24,6 +24,20 @@ public class CircularLinkedList {
 		return temp;
 	}
 
+	    public static boolean isCircula12r(Node node) {
+	        Node first = node, second = node;
+	 
+	        while (first != null && first.next != null && second.next != null && second.next.next != null) {
+	            first = first.next;
+	            second = second.next.next;
+	            if (first.hashCode() == second.hashCode()) {
+	                return true;
+	            }
+	        }
+	 
+	        return false;
+	    }
+	
 	public static void main(String args[]) {
 		Node head = newNode(1);
 		head.next = newNode(2);
@@ -31,6 +45,6 @@ public class CircularLinkedList {
 		head.next.next.next = newNode(4);
 		System.out.print(isCircular(head) ? "Yes\n" : "No\n");
 		head.next.next.next.next = head;
-		System.out.print(isCircular(head) ? "Yes\n" : "No\n");
+		System.out.print(isCircula12r(head) ? "Yes\n" : "No\n");
 	}
 }

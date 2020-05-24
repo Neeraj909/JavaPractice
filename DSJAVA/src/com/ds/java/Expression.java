@@ -6,7 +6,7 @@ public class Expression {
 
 	public static void main(String[] args) {
 		 
-         String str = "({[]})";
+         String str = "(){}[]";
  
          //Declare a stack
          Stack<Character> st = new Stack<Character>();
