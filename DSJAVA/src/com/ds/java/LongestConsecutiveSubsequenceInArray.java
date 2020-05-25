@@ -1,18 +1,23 @@
 package com.ds.java;
 
+import java.util.Collections;
+import java.util.HashMap;
+
 public class LongestConsecutiveSubsequenceInArray {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int temp=1;
-		int arr[]= {1, 9, 3, 10, 4, 20, 2};
 		
-		System.out.println(array(arr));
+		int arr[]= {3, 10, 3, 11, 4, 5, 6, 7, 8, 12};
+		int n=arr.length;
+		
+		//System.out.println(array(arr));
+		int num=LongIncrConseqSubseq(arr,n);
 
 	}
 
 	public static int array(int[] array) {
-        int count = 0, temp = 0;
+        int count = 0, temp = 1;
         for (int i = 0; i < array.length; i++) {
             count = 0;
             for (int j = i, k = i + 1; j < array.length - 1; j++, k++) {
@@ -28,4 +33,33 @@ public class LongestConsecutiveSubsequenceInArray {
         }
         return temp + 1;
     }
+	static int LongIncrConseqSubseq(int arr[], int n) 
+    { 
+       
+        HashMap<Integer, Integer> map = new HashMap<>(); 
+         
+       
+        map.put(arr[0], 1); 
+        for (int i = 1; i < n; i++) { 
+         
+            // check if last consequent of arr[i] exist or not 
+            if (map.containsKey(arr[i] - 1)) { 
+         
+                // put the updated consequent number  
+                // and increment its value(length) 
+                map.put(arr[i], map.get(arr[i] - 1) + 1); 
+            
+                // remove the last consequent number 
+                map.remove(arr[i] - 1); 
+            } 
+  
+            // if their is no last consequent of 
+            // arr[i] then put arr[i] 
+            else { 
+                map.put(arr[i], 1); 
+            } 
+        } 
+        return Collections.max(map.values()); 
+    } 
+  
 }

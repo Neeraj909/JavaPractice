@@ -7,7 +7,7 @@ public class FindSubStringIntoString {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String s = "NeerajSharmaRam";
-	    String sub = "maRr";
+	    String sub = "nrj";
 	    int count = 0;
 	    for (int i = 0; i < s.length(); i++) {
 	        if (s.charAt(i) == sub.charAt(count)) {
