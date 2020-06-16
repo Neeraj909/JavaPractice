@@ -20,7 +20,7 @@ public class ClosedToZeroInArray {
 			}
 		}
 		
-		
+		System.out.println(minSum);
 		
 		
 		

@@ -6,8 +6,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.UUID;
 
 public class Test  {
+	
 	int a;
 	int b;
 	public void m1(int a,int b) {
@@ -36,8 +38,25 @@ public class Test  {
 	      Set<String> uniqueList = new HashSet<String>(duplicatList);
 	      duplicatList = new ArrayList<String>(uniqueList); //let GC will doing free memory
 	      System.out.println("Removed Duplicate : "+duplicatList);
+	      
+	      String s1=UUID.randomUUID().toString().substring(0,36)+UUID.randomUUID().toString().substring(0,36)+UUID.randomUUID().toString().substring(0,36)+UUID.randomUUID().toString().substring(0,36);
+	     System.out.println(s1.length());
+	     System.out.println(s1);
+	     
 	    
 	}
+	public String setLenghtCharacterName(int num) {
+		String s1=UUID.randomUUID().toString().substring(0,36);
+		for(int i=0;i<10;i++) {
+			s1=s1+UUID.randomUUID().toString().substring(0,36);
+			if(s1.length()>=num) {
+				break;
+			}
+			
+		}
+		return s1;
+	}
+	
 	
 
 }

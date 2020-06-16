@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testng.TestTestng" class="method navigator-link" hash-for-method="f">f</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testng.TestTestng" class="method navigator-link" hash-for-method="f1">f1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testng.TestTestng" class="method navigator-link" hash-for-method="f2">f2</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testng.TestTestng" class="method navigator-link" hash-for-method="first">first</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -137,23 +127,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="f">
-                  </a> <!-- f -->
-                  <span class="method-name">f</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="f1">
-                  </a> <!-- f1 -->
-                  <span class="method-name">f1</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="f2">
-                  </a> <!-- f2 -->
-                  <span class="method-name">f2</span>
+                  <a name="first">
+                  </a> <!-- first -->
+                  <span class="method-name">first</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -161,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/ly/kq_9_9qn5jgc54qf7kdrc1xw0000gp/T/testng-eclipse--133719701/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/ly/kq_9_9qn5jgc54qf7kdrc1xw0000gp/T/testng-eclipse-1758857288/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -210,24 +186,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'f')
+data.setCell(0, 1, 'first')
 data.setCell(0, 2, 'testng.TestTestng')
-data.setCell(0, 3, 10);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'f2')
-data.setCell(1, 2, 'testng.TestTestng')
-data.setCell(1, 3, 1);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'f1')
-data.setCell(2, 2, 'testng.TestTestng')
-data.setCell(2, 3, 1);
+data.setCell(0, 3, 4);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 ms</span>
+              <span class="suite-total-time">Total running time: 4 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -254,18 +222,22 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">testng.TestTestng</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">f</span>
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">f2</span>
-                <span class="method-start">16 ms</span>
+                <span class="method-name">first</span>
+                <span class="method-start">5 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">f1</span>
-                <span class="method-start">19 ms</span>
-              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">12 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">13 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
