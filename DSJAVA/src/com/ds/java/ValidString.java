@@ -2,7 +2,7 @@ package com.ds.java;
 
 import java.util.Stack;
 
-public class Expression {
+public class ValidString {
 
 	public static void main(String[] args) {
 		 

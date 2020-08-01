@@ -21,6 +21,7 @@ public class ClosedToZeroInArray {
 		}
 		
 		System.out.println(minSum);
+		System.out.println(arr[index1]+" "+arr[index2]);
 		
 		
 		
