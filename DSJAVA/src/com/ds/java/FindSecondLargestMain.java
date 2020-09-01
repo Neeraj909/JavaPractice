@@ -20,6 +20,7 @@ public class FindSecondLargestMain {
 			
 			
 		}
+		System.out.println(secMax);
 
 	}
 

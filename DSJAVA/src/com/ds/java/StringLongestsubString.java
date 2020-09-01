@@ -1,16 +1,17 @@
 package com.ds.java;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class StringLongestsubString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s1 = "NnverajShafdfedeerergrbbnyjyhcscrma".toLowerCase();
+		String s1 = "bbb".toLowerCase();
 		StringBuffer sb=new StringBuffer();
-		HashMap<Character,Integer> map=new HashMap<Character,Integer>();
-		HashMap<Character,Integer> mapCopy=new HashMap<Character,Integer>();
+		Map<Character,Integer> map=new LinkedHashMap<Character,Integer>();
+	Object mapCopy=new LinkedHashMap<Character,Integer>();
 		int count=0;
 		for(int i=0;i<s1.length();i++) {
 			for(int j=i+1;j<s1.length();j++) {
@@ -25,8 +26,8 @@ public class StringLongestsubString {
 				}
 				
 			}
-			if(count>mapCopy.size()) {
-				mapCopy=(HashMap<Character, Integer>) map.clone();
+			if(count>((Map<Character, Integer>) mapCopy).size()) {
+				mapCopy=((HashMap<Character, Integer>) map).clone();
 				map.clear();
 			}
 			else {
