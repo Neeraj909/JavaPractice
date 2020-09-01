@@ -2,7 +2,7 @@ package com.ds.java;
 
 import java.util.Stack;
 
-public class ValidString {
+public class ValidParentheses {
 
 	public static void main(String[] args) {
 		 
