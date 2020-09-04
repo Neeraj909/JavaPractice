@@ -6,6 +6,7 @@ public class ManpulateTheString {
 		// TODO Auto-generated method stub
 		
 		        String s1 = "MY NAME IS NEERAJ";
+		        //output="JA REEN SI EMANYM"
 		        String rev="";
 		        char ch[]=s1.toCharArray();
 		        int size1=s1.length()-1;
