@@ -5,10 +5,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 
-public class A{
+public class  A extends B{
 	
 
 	public static void main(String[] args) {
+		B b=new B();
+		System.out.println(b.a);
 	Map<String,String> map =new HashMap<>();
 	map.put("n", "w");
 	System.out.println(map.get("n"));
