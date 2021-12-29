@@ -7,36 +7,22 @@ import java.util.Map;
 public class StringLongestsubString {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String s1 = "bbb".toLowerCase();
-		StringBuffer sb=new StringBuffer();
-		Map<Character,Integer> map=new LinkedHashMap<Character,Integer>();
-	Object mapCopy=new LinkedHashMap<Character,Integer>();
-		int count=0;
-		for(int i=0;i<s1.length();i++) {
-			for(int j=i+1;j<s1.length();j++) {
-				if(s1.charAt(i)==s1.charAt(j)|| map.containsKey(s1.charAt(j-1))) {
-					count =map.size();
-					break;
-					
+		public static void main(String[] args) {
+			String input = "acbdfghybdfxyzwstvilop";
+			Map<Character, Integer> visited = new HashMap<>();
+			String output = "";
+			for (int start = 0, end = 0; end < input.length(); end++) {
+				char currChar = input.charAt(end);
+				if (visited.containsKey(currChar)) {
+					start = Math.max(visited.get(currChar) + 1, start);
 				}
-				else {
-					map.put(s1.charAt(j-1), i);
-				
+				if (output.length() < end - start + 1) {
+					output = input.substring(start, end + 1);
 				}
-				
+				visited.put(currChar, end);
 			}
-			if(count>((Map<Character, Integer>) mapCopy).size()) {
-				mapCopy=((HashMap<Character, Integer>) map).clone();
-				map.clear();
-			}
-			else {
-				map.clear();
-			}
-			
-			
+			System.out.println(output);
 		}
-		System.out.println(mapCopy);
 
 	}
 		
