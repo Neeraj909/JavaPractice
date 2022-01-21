@@ -6,6 +6,29 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class SortTheArray {
+	public static void sortArray(int arr[], int N) {
+
+		// Traverse the array
+		for (int i = 0; i < N; ) {
+
+			// If the current element is
+			// at correct position
+			if (arr[i] == i + 1) {
+				i++;
+			}
+
+			// Else swap the current element
+			// with it's correct position
+			else {
+				// Swap the value of
+				// arr[i] and arr[arr[i]-1]
+				int temp1 = arr[i];
+				int temp2 = arr[arr[i] - 1];
+				arr[i] = temp2;
+				arr[temp1 - 1] = temp1;
+			}
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
